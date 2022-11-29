@@ -9,6 +9,7 @@ namespace hello_world
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Hello Nullgar!");
+            Console.WriteLine("Hi World!");
             Console.Read();
         }
     }
