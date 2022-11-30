@@ -1,0 +1,114 @@
+# Day 1 C#
+
+### Hello World! in C#
+
+```csharp
+using System;
+
+namespace hello_world
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+    }
+}
+```
+
+### C# Variables and Data Types
+
+Variables in C# consist of:
+
+- Type: Type of data being stored
+- Name: Name of the variable
+- Data: The actual data being stored
+
+### Variable example with default value
+
+```csharp
+public class Lecture {
+	int age = 15; //This is the variable of type integer
+	public static void Main(string[] args){
+		Console.WriteLine(age); // Output will be 15
+	}
+
+}
+```
+
+### Primitive Number Types
+
+- sbyte: whole numbers from -128 to 127.
+- short: whole numbers from -32767 to 32767.
+- int: whole numbers from -2,147,483,648 to 2,147,483,647.
+- long: whole numbers from -9 billion and something to 9 billion.
+- float: allows decimals and a range from 1.5 x 10 ^-45 to 3.4 x 10^38 - 7 digit precision usually number has an f at the end of it or it would be read as a double.
+- Double: allows decimals and an even higher range than the float - 15 digit precision. - No need to add the f.
+- decimal: allows decimals and even higher range than the double - 28 digit precision. No need to add the f.
+
+In most cases you should use the smallest data type given an input.
+
+### Other Types of Primitive Data
+
+- bool: only allows two states: true / false.
+- char: allows a single character literal or unicode E.X. ‘W’
+
+### Other Types of Non-Primitive Data
+
+- string: allows multiple letters and unicodes.
+
+### Other Data Types
+
+[A tour of C# - Types and their members](https://learn.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types)
+
+Keep in mind that the more variables you declare or create the more memory intensive your application will become.
+
+Depending on the type of data being stored you cannot implicitly convert a double to an int but you can convert a int to a double when using arithmetic operations. 
+
+### String Datatype
+
+Strings can be declared by using the instantiation of String. In most cases the proper way to declare a variable as a  string is to use lowercase string.
+
+You can also concatenate strings by using “This” + variable. In most instances C# is smart enough to convert ints to str if you try to concatenate them together.
+
+Additionally the namespace of system has a class named String that is used when declaring and concatenating strings. So when you declare a variable as the string class you can use the built in methods.
+
+### Code Example
+
+```csharp
+using System;
+
+namespace StringExamples
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string mystring = "Hello, world!";
+            Console.WriteLine("Famous phrase " + mystring);
+            string capsMessage = mystring.ToUpper();
+            Console.WriteLine(capsMessage);
+        }
+    }
+}
+```
+
+### Comments
+
+Like in other languages C# has different comments:
+
+- Single Line Comment
+
+```csharp
+//This is a single line comment
+```
+
+- Multi Line Comment
+
+```csharp
+/*This is a 
+muliline */
+```
+
+- XML Document Comment
