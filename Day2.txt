@@ -1,0 +1,65 @@
+# Day 2 C#
+
+# Value vs. Reference Type
+
+### Value Type
+
+- Value type as the name suggest is a data type which when declared and assigned a value, holds the value directly on its own memory space.
+- The value type uses a heap to store the value.
+- Value types data types are int, float, long, double, char, bool, decimal, double, etc.
+
+### Reference Type
+
+- Reference types is a variable type which instead of storing the value in memory directly, stores the memory location of the actual data.
+- The variable here stores the memory reference of the data and not the data directly.
+- Reference type data types are string, class, Array etc.
+- When we copy this reference type of a data type it will just copy the memory address of the data so we will then have two variables pointing to the the same date.
+
+So reference types only point at the data and don’t actually store any data. That why if you update the value of a reference type it will re-assign the value to all variables pointing to that reference.
+
+# Console Methods Explained
+
+```csharp
+Console.Write("Text here");
+// Prints and keeps cursor on same line.
+```
+
+```csharp
+Console.WriteLine("Text here");
+// Prints and puts the cursor on the next line.
+```
+
+```csharp
+Console.Read();
+// Takes in a single input of type string and 
+// it returns the ASCII value of the input.
+```
+
+```csharp
+Console.ReadLine(); 
+// Takes a string or integer input and returns
+//it as the Output value.
+```
+
+```csharp
+Console.ReadKey();
+//Takes a single input of type string and it
+//returns the Key Info.
+```
+
+### Sample Code
+
+```csharp
+static void Main(string[] args)
+{
+	Console.WriteLine("Hello Welcome"); 
+	//Prints the text and jumps to a new line
+	Console.Write("Hello");
+	//Prints the text in the same line
+	Console.ReadKey();
+	//Stops the program from stopping until a 
+	//key is pressed.
+}
+```
+
+### Sample of String Interpolation
