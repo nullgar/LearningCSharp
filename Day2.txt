@@ -63,3 +63,23 @@ static void Main(string[] args)
 ```
 
 ### Sample of String Interpolation
+
+```csharp
+static void Main(string[] args)
+{
+	Console.Write("Enter a string and press enter"); 
+	string readInput = Console.ReadLine();
+	Console.WriteLine("You entered {0}", readInput);
+	//The 0 is replaced by the value of readInput
+	Console.ReadKey();
+	
+
+	Console.Write("Enter a string and press enter"); 
+	int asciiValue = Console.Read();
+	Console.WriteLine("You entered {0}", asciiValue);
+	//The 0 is replaced by the value of asciiValue
+	Console.ReadKey();
+}
+```
+
+I did a bit of testing and the 0 needs to be in the brackets for the interpolation to work.

@@ -8,7 +8,7 @@ namespace ConsoleAppExamples
         {
             Console.WriteLine("Enter a string and press enter: ");
             string readInput = Console.ReadLine();
-            Console.WriteLine("You entered {a}", readInput);
+            Console.WriteLine("You entered {0}", readInput);
             //The 0 is replaced by the value of readInput
             Console.ReadKey();
 
