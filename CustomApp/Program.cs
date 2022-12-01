@@ -19,16 +19,24 @@ namespace CustomApp
             Console.BackgroundColor = ConsoleColor.Red;
             Console.Clear();
             Console.WriteLine("Device Infected");
-            Console.WriteLine($"/C runas /netonly /user:{Environment.MachineName}\\{Environment.UserName}");
+            //Console.WriteLine($"/C runas /netonly /user:{Environment.MachineName}\\{Environment.UserName}");
             Console.Beep();
             Console.Beep();
             Console.Beep();
             Console.Beep();
             Console.Beep();
             Console.WriteLine("WARNING");
-            Console.ReadKey();
+            //Console.ReadKey();
             Console.Clear();
-            Process.Start("cmd.exe", $"/C start chrome.exe --autoplay-policy=no-user-gesture-required https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            ProcessStartInfo cmd = new ProcessStartInfo("cmd.exe", "/C start chrome.exe --autoplay-policy=no-user-gesture-required https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+            cmd.UseShellExecute = false;
+            cmd.Verb = "runas";
+            cmd.CreateNoWindow = false;
+            cmd.RedirectStandardOutput = false;
+            //cmd.RedirectStandardError = true;
+            cmd.RedirectStandardInput = true;
+            Process.Start(cmd);
+            //Process.Start("cmd.exe", $"/C start chrome.exe --autoplay-policy=no-user-gesture-required https://www.youtube.com/watch?v=dQw4w9WgXcQ");
             //Process cmd = new Process();
             //cmd.StartInfo.FileName = @"C:\Windows\System32\cmd.exe";
             //cmd.Start();
@@ -37,8 +45,8 @@ namespace CustomApp
             //string webaddress = "https://youtube.com/";
             //myProcess.StartInfo.FileName = webaddress;
             //myProcess.Start();
-            
-            
+
+
 
 
 
