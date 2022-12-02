@@ -17,12 +17,18 @@ namespace ImplicitExplicitConversion
             Console.Read();
             //You will notice that myInts value is not rounded but just cut to be a whole number
 
-            //Implicit Conversion
+            //Implicit Conversion can convert smaller types to larger types
             int num = 1222;
             long newNum = num;
 
             float myFloat = 12.22f;
             double myDoubleExample = myFloat;
+
+
+            //type conversion
+            string myString = myDoubleExample.ToString();
+            string secondString = myFloat.ToString();
+            //you can also do this with booleans
         }
     }
 }
