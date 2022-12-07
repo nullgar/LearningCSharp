@@ -11,6 +11,8 @@ namespace MethodsExamples
             Console.WriteLine(result);
             int multResult = Multiply(2, 4);
             Console.WriteLine(multResult);
+            double divideResult = Divide(2, 4);
+            Console.WriteLine(divideResult);
             Console.Read();
         }
 
@@ -22,6 +24,11 @@ namespace MethodsExamples
         public static int Multiply(int num1, int num2)
         {
             return num1 * num2;
+        }
+
+        public static double Divide(double num1, double num2)
+        {
+            return num1/ num2;
         }
     }
 }
