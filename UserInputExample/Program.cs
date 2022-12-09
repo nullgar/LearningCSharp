@@ -6,13 +6,18 @@ namespace UserInputExample
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(Add());
+            Console.Read();
+        }
+
+        public static string Add() {
             Console.WriteLine("Let's do some addition. What is the first number?");
             string num1 = Console.ReadLine();
             Console.WriteLine("What is the second number?");
             string num2 = Console.ReadLine();
 
-            Console.WriteLine($"The total is {Int64.Parse(num1) + Int64.Parse(num2)}");
-            Console.Read();
+            string result = $"The total is {int.Parse(num1) + int.Parse(num2)}";
+            return result;
         }
     }
 }
