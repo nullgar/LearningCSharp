@@ -31,7 +31,8 @@ namespace TryCatch
 
             if (res != "") {
                 Console.WriteLine($"The resul is {res}."); 
-            } else {
+            }
+            else {
                 Console.WriteLine("Please try again!");
                     }
             Console.Read();
