@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 
 namespace UserSystemPrototype
 {
@@ -7,7 +6,7 @@ namespace UserSystemPrototype
     {
         static string userName;
         static string password;
-        private static int pid;
+        //private static int pid;
 
         static void Main(string[] args)
         {
@@ -30,9 +29,9 @@ namespace UserSystemPrototype
         private static void Register()
         {
             //Process process = null;
-            Console.WriteLine("Hello, please enter your username and press enter: ");
+            Console.WriteLine("Hello, please enter your username:");
             userName = Console.ReadLine();
-            Console.WriteLine("Hello, please enter your password and press enter: ");
+            Console.WriteLine("Hello, please enter your password:");
             password = Console.ReadLine();
             Console.WriteLine("Succesfully Registered!");
 
@@ -52,6 +51,7 @@ namespace UserSystemPrototype
                 } else
                 {
                     Console.WriteLine("Password or username is incorrect.");
+                    Console.Read();
                 }
             }
             else if (userName != null && password != null && userName.ToLower().Equals(checkName.ToLower()) && password.Equals(checkPass))
@@ -61,6 +61,7 @@ namespace UserSystemPrototype
             else
             {
                 Console.WriteLine("Password or username is incorrect.");
+                Console.Read();
             }
 
             }
