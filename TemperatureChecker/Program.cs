@@ -20,11 +20,11 @@ namespace TemperatureChecker
             if (int.TryParse(val, out temp)) {
                 if (temp <= 15) {
                     Console.WriteLine("it is too cold here");
-                } else if ()
+                } else if (temp >= 16 && temp <= 28)
                 {
-                    Console.WriteLine();
-                } else if () { 
-                    Console.WriteLine();
+                    Console.WriteLine("it is okay");
+                } else if (temp > 28) { 
+                    Console.WriteLine("it is hot here");
                 }
                 Console.WriteLine($"{temp}f");
             } else
