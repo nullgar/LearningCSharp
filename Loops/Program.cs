@@ -14,11 +14,13 @@ namespace Loops
             //Console.WriteLine("Hello World!");
 
             int counterVar = 0;
+            string text = "";
             while (counterVar < 6)
             {
                 //execute your code
                 Console.WriteLine("Please press the Enter key to increment the value!");
-                Console.ReadLine();
+                text = Console.ReadLine();
+                Console.WriteLine(text == "");
                 counterVar++;
                 
                 string checkVar = counterVar < 6 ? $"{counterVar}" : "";
