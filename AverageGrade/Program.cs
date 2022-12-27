@@ -14,19 +14,19 @@ namespace AverageGrade
         static string CheckInput( )
         {
             int count = 1;
-            int total = 0;
+            double total = 0;
             Console.WriteLine("Please enter the students grades.");
             string val = "0";
             while (val != "-1")
             {
-                int num;
+                double num;
                 Console.WriteLine("Please enter a grade from from 0 to 20");
                 Console.WriteLine($"Student {count}");
                 val = Console.ReadLine();
-                if (int.TryParse(val, out num) && num >= 0 && num <= 20) {
+                if (double.TryParse(val, out num) && num >= 0 && num <= 20) {
                     total += num;
                     count++;
-                } else if (int.TryParse(val, out num) && num == -1) {
+                } else if (double.TryParse(val, out num) && num == -1) {
 
                     Console.WriteLine($"The average is {total / count}");
                     break;
